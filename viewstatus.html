@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            salary status
+        </title>
+        <style>
+        table {
+    margin: 10px auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 25px;
+    text-align: center;
+}
+
+th {
+    background-color: lightgray;
+}
+        
+        </style>
+    </head>
+    <body>
+
+        <h1> SALARY STATUS OF TEACHERS</h1>
+        <table>
+            <tr>
+                <th> name</th>
+                <th>salary</th>
+                <th>salary status</th>
+                <th>subject</th>
+            </tr>
+        {% for name,salary,salary_status,subject in rows %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{salary}}</td>
+                <td>{{salary_status}}</td>
+                <td>{{subject}}
+            </tr>
+        {% endfor %}
+    </body>
+</html>

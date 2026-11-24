@@ -2,10 +2,10 @@ from flask import Flask ,render_template,request,redirect,url_for
 app=Flask(__name__)
 import psycopg
 conn=psycopg.connect(
-            host="localhost",
-            user="postgres",
-            dbname="rohan",
-            password="12345"
+            host="",
+            user="",
+            dbname="",
+            password=""
 
         )
 cur=conn.cursor()
@@ -119,7 +119,7 @@ def syllabus():
 def password():
     if request.method=="POST":
       password=request.form["password"]
-      if password=="rohan":
+      if password=="":
           return redirect (url_for("principal"))
       else:
           return ("incorrect password")
